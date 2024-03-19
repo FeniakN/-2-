@@ -1,0 +1,15 @@
+def main():
+    # Вхідні числа
+    numbers = [10, 2, 8]
+
+    # Піднести до квадрата ті числа, значення яких невід'ємні,
+    # і в четверту ступінь - від'ємні
+    results = [num ** 2 if num >= 0 else num ** 4 for num in numbers]
+
+    # Вивести результати
+    print("Піднесення до квадрата/четвертої ступені:")
+    for i, result in enumerate(results, start=1):
+        print(f"Число {i}: {result}")
+
+if __name__ == "__main__":
+    main()
