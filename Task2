@@ -1,0 +1,26 @@
+ #Task2
+import math
+
+def distance_to_origin(x, y):
+    # Обчислення відстані від точки до початку координат
+    return math.sqrt(x**2 + y**2)
+
+def main():
+    # Координати точок
+    x1, y1 = 3, 4
+    x2, y2 = 1, 2
+
+    # Обчислити відстані до початку координат для кожної точки
+    distance_A = distance_to_origin(x1, y1)
+    distance_B = distance_to_origin(x2, y2)
+
+    # Визначити, яка з точок знаходиться ближче до початку координат
+    if distance_A < distance_B:
+        print("Точка A знаходиться ближче до початку координат.")
+    elif distance_B < distance_A:
+        print("Точка B знаходиться ближче до початку координат.")
+    else:
+        print("Точка A та точка B розташовані на однаковій відстані до початку координат.")
+
+if __name__ == "__main__":
+    main()
