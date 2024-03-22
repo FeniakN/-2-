@@ -1,0 +1,27 @@
+#Task3
+def is_triangle_possible(angle1, angle2):
+    # Перевірка чи сума кутів трикутника дорівнює 180 градусам
+    return angle1 + angle2 < 180
+
+def is_right_triangle(angle1, angle2):
+    # Перевірка чи є один з кутів прямим (90 градусів)
+    return angle1 == 90 or angle2 == 90 or (180 - angle1 - angle2) == 90
+
+def main():
+    # Уведення кутів трикутника з клавіатури
+    angle1 = float(input("60 "))
+    angle2 = float(input("90 "))
+
+    # Перевірка чи існує такий трикутник
+    if is_triangle_possible(angle1, angle2):
+        print("Такий трикутник існує.")
+        # Перевірка чи є трикутник прямокутним
+        if is_right_triangle(angle1, angle2):
+            print("Цей трикутник є прямокутним.")
+        else:
+            print("Цей трикутник не є прямокутним.")
+    else:
+        print("Такий трикутник не існує.")
+
+if __name__ == "__main__":
+    main()
